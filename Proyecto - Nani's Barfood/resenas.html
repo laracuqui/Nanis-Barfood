@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANI'S | Reseñas</title>
+    <link rel="icon" type="image/png" href="imagenes\logo nanis.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <img src="imagenes\logo nanis.png" alt="Logo NANI'S">
+    </a>
+    <nav class="nav-enlaces">
+        <a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="resenas.html">Reseñas</a><a href="racion.html">Calcular ración</a><a href="dudas.html">Dudas</a>
+    </nav>
+    <div class="nav-icons">
+        <a href=https://www.instagram.com/nanisbarfood/ target="_blank" class="icon-link">
+            <img src="imagenes/instagram logo.png" alt="Instagram">
+        </a>
+
+        <a href="https://wa.me/541123985275" target="_blank" class="icon-link">
+            <img src="imagenes\logo_whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a href="ingresar.html" class="icon-link">
+            <img src="imagenes\ingresar_cuenta_logo.png" alt="Ingresar">
+        </a>
+    </div>
+</header>
+
+<main class="pagina">
+    <section class="encabezado-pagina">
+        <span class="etiqueta">OPINIONES</span>
+        <h1>Lo que dicen de NANI'S</h1>
+        <p>Tu experiencia nos ayuda a seguir creciendo.</p>
+    </section>
+
+    <section class="resenas" id="lista-resenas">
+        <article class="resena">
+            <div class="estrellas">★★★★★</div>
+            <h2>Una experiencia muy linda</h2>
+            <p> Gala super feliz con sus viandas! Me alegra darle alimento de calidad para que crezca fuerte y sana! Gracias por el servicio! Recomiendo 1000!
+            </p>
+            <span>Cliente de NANI'S</span>
+        </article>
+
+        <article class="resena">
+            <div class="estrellas">★★★★★</div>
+            <h2>¡Me encantó!</h2>
+            <p>Hace 6 meses que con mi pareja le compramos para nuestros bebes, son dos gatos adultos, y la verdad que ellos felices con la comida. La atención de Ro y su interés por el bien estar de los gatis es un re plus, además de siempre estar disponible para
+                explicarnos y escuchar si hay alguna preferencia para ellos. Recomiendo muchisimo</p>
+            <span>Cliente de NANI'S</span>
+        </article>
+
+        <article class="resena">
+            <div class="estrellas">★★★★★</div>
+            <h2>Buena atención</h2>
+            <p>Una maravilla. La atención es un mil siempre. Destacó además la frescura de los alimentos y el
+                interés genuino en cuidar a
+                cada una de nuestras mascotas
+                me conmueve. Gracias nanis
+                barfood</p>
+            <span>Cliente de NANI'S</span>
+        </article>
+    </section>
+
+    <section class="formulario-resena">
+        <h2>Dejanos tu reseña</h2>
+        <p>Contanos cómo fue tu experiencia.</p>
+
+        <form id="form-resena">
+            <label for="nombre-resena">Tu nombre</label>
+            <input id="nombre-resena" type="text" required placeholder="Escribí tu nombre">
+
+            <label for="estrellas-resena">Tu puntuación</label>
+            <select id="estrellas-resena" required>
+                <option value="">Elegí una puntuación</option>
+                <option value="5">★★★★★ - Excelente</option>
+                <option value="4">★★★★ - Muy buena</option>
+                <option value="3">★★★ - Buena</option>
+                <option value="2">★★ - Regular</option>
+                <option value="1">★ - Mala</option>
+            </select>
+
+            <label for="texto-resena">Tu opinión</label>
+            <textarea id="texto-resena" rows="4" required placeholder="Escribí tu reseña"></textarea>
+
+            <button type="submit" class="boton-principal">Publicar reseña</button>
+            <p id="mensaje-resena" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-contenido">
+        <div> <a href="index.html">
+            <img src="imagenes\logo nanis.png" alt="Logo NANI'S" style="width: 110px; max-width: 100%; border-radius: 50%;">
+        </a>
+        <p>Comida para mascotas hecha con amor.</p></div>
+        <div><h3>Contactanos</h3><p>WhatsApp: 11 2398-5275</p>
+            <p>Correo: nanisbarfood@gmail.com</p></div>
+        <div><h3>Seguinos</h3><a class="footer-red" class="contenedor-alineado" href="https://www.instagram.com/nanisbarfood/" target="_blank"><img src="imagenes\instagram logo.png" alt="Instagram"> Instagram</a></div></div>
+    </div>
+    <div class="medios-pago"><span>Medios de pago</span> <img src="imagenes\efectivo.png" alt="Efectivo" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\visa.jpg" alt="Visa" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\Mastercard.png" alt="Mastercard" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\American.png" alt="American Express" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes/mercado pago.png" alt="Mercado Pago" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\transferencia.png" alt="Transferencia" style="max-width: 60px; max-height: 35px;"></div>
+    <div class="copyright">© 2026 NANI'S - Todos los derechos reservados.</div>
+</footer>
+
+<script>
+document.getElementById("form-resena").addEventListener("submit", function(evento) {
+    evento.preventDefault();
+
+    const nombre = document.getElementById("nombre-resena").value.trim();
+    const puntuacion = Number(document.getElementById("estrellas-resena").value);
+    const opinion = document.getElementById("texto-resena").value.trim();
+
+    if (!nombre || !puntuacion || !opinion) return;
+
+    const tarjeta = document.createElement("article");
+    tarjeta.className = "resena";
+
+    const estrellas = document.createElement("div");
+    estrellas.className = "estrellas";
+    estrellas.textContent = "★".repeat(puntuacion) + "☆".repeat(5 - puntuacion);
+
+    const titulo = document.createElement("h2");
+    titulo.textContent = "Opinión de " + nombre;
+
+    const texto = document.createElement("p");
+    texto.textContent = opinion;
+
+    const firma = document.createElement("span");
+    firma.textContent = "Cliente de NANI'S";
+
+    tarjeta.append(estrellas, titulo, texto, firma);
+    document.getElementById("lista-resenas").prepend(tarjeta);
+
+    document.getElementById("form-resena").reset();
+    document.getElementById("mensaje-resena").textContent = "¡Tu reseña se agregó a esta página!";
+});
+</script>
+
+</body>
+</html>

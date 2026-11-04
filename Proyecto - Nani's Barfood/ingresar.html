@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANI'S | Mi cuenta</title>
+    <link rel="icon" type="image/png" href="imagenes\logo nanis.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <img src="imagenes\logo nanis.png" alt="Logo NANI'S">
+    </a>
+    <nav class="nav-enlaces">
+        <a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="resenas.html">Reseñas</a><a href="racion.html">Calcular ración</a><a href="dudas.html">Dudas</a>
+    </nav>
+    <div class="nav-icons">
+        <a href=https://www.instagram.com/nanisbarfood/ target="_blank" class="icon-link">
+            <img src="imagenes/instagram logo.png" alt="Instagram">
+        </a>
+
+        <a href="https://wa.me/541123985275" target="_blank" class="icon-link">
+            <img src="imagenes\logo_whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a href="ingresar.html" class="icon-link">
+            <img src="imagenes\ingresar_cuenta_logo.png" alt="Ingresar">
+        </a>
+    </div>
+</header>
+
+<main class="pagina">
+    <section class="login">
+        <img src="img/logo.png" alt="NANI'S" class="login-logo">
+        <h1>Mi cuenta</h1>
+        <p>Ingresá o creá tu cuenta.</p>
+
+        <div class="pestanas">
+            <button type="button" id="pestana-ingresar" class="pestana activa">Iniciar sesión</button>
+            <button type="button" id="pestana-crear" class="pestana">Crear cuenta</button>
+        </div>
+
+        <form id="form-cuenta">
+            <label for="nombre-cuenta" id="label-nombre" class="oculto">Nombre</label>
+            <input type="text" id="nombre-cuenta" class="oculto" placeholder="Tu nombre">
+
+            <label for="email-cuenta">Correo electrónico</label>
+            <input type="email" id="email-cuenta" required placeholder="tu@email.com">
+
+            <label for="clave-cuenta">Contraseña</label>
+            <input type="password" id="clave-cuenta" required minlength="6" placeholder="Mínimo 6 caracteres">
+
+            <button type="submit" class="boton-principal" id="boton-cuenta">Iniciar sesión</button>
+            <p id="mensaje-cuenta" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-contenido">
+        <div> <a href="index.html">
+            <img src="imagenes\logo nanis.png" alt="Logo NANI'S" style="width: 110px; max-width: 100%; border-radius: 50%;">
+        </a>
+        <p>Comida para mascotas hecha con amor.</p></div>
+        <div><h3>Contactanos</h3><p>WhatsApp: 11 2398-5275</p>
+            <p>Correo: nanisbarfood@gmail.com</p></div>
+        <div><h3>Seguinos</h3><a class="footer-red" class="contenedor-alineado" href="https://www.instagram.com/nanisbarfood/" target="_blank"><img src="imagenes\instagram logo.png" alt="Instagram"> Instagram</a></div></div>
+    </div>
+    <div class="medios-pago"><span>Medios de pago</span> <img src="imagenes\efectivo.png" alt="Efectivo" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\visa.jpg" alt="Visa" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\Mastercard.png" alt="Mastercard" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\American.png" alt="American Express" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes/mercado pago.png" alt="Mercado Pago" style="max-width: 60px; max-height: 35px;">
+        <img src="imagenes\transferencia.png" alt="Transferencia" style="max-width: 60px; max-height: 35px;"></div>
+    <div class="copyright">© 2026 NANI'S - Todos los derechos reservados.</div>
+</footer>
+
+<script>
+const pestanaIngresar = document.getElementById("pestana-ingresar");
+const pestanaCrear = document.getElementById("pestana-crear");
+const nombre = document.getElementById("nombre-cuenta");
+const labelNombre = document.getElementById("label-nombre");
+const botonCuenta = document.getElementById("boton-cuenta");
+const mensaje = document.getElementById("mensaje-cuenta");
+let modoCrear = false;
+
+function cambiarModo(crear) {
+    modoCrear = crear;
+    nombre.classList.toggle("oculto", !crear);
+    labelNombre.classList.toggle("oculto", !crear);
+    nombre.required = crear;
+    botonCuenta.textContent = crear ? "Crear cuenta" : "Iniciar sesión";
+    pestanaCrear.classList.toggle("activa", crear);
+    pestanaIngresar.classList.toggle("activa", !crear);
+    mensaje.textContent = "";
+}
+
+pestanaIngresar.addEventListener("click", function() {
+    cambiarModo(false);
+});
+
+pestanaCrear.addEventListener("click", function() {
+    cambiarModo(true);
+});
+
+document.getElementById("form-cuenta").addEventListener("submit", function(evento) {
+    evento.preventDefault();
+
+    if (modoCrear) {
+        mensaje.textContent = "El formulario está completo. Para registrar la cuenta de verdad, hay que conectarlo a un sistema de usuarios.";
+    } else {
+        mensaje.textContent = "El formulario está completo. Para iniciar sesión, necesitás conectar un sistema de usuarios.";
+    }
+});
+</script>
+
+</body>
+</html>

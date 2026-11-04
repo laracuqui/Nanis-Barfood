@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANI'S | Calcular ración</title>
+    <link rel="icon" type="image/png" href="imagenes\logo nanis.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/png" href="imagenes\Logo Nanis Barfood - Leoni.png">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <img src="imagenes\logo nanis.png" alt="Logo NANI'S">
+    </a>
+    <nav class="nav-enlaces">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="resenas.html">Reseñas</a>
+        <a href="racion.html">Calcular ración</a>
+        <a href="dudas.html">Dudas</a>
+    </nav>
+    <div class="nav-icons">
+        <a href=https://www.instagram.com/nanisbarfood/ target="_blank" class="icon-link">
+            <img src="imagenes/instagram logo.png" alt="Instagram">
+        </a>
+
+        <a href="https://wa.me/541123985275" target="_blank" class="icon-link">
+            <img src="imagenes\logo_whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a href="ingresar.html" class="icon-link">
+            <img src="imagenes\ingresar_cuenta_logo.png" alt="Ingresar">
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="encabezado-pagina">
+        <h1>Calculá su ración</h1>
+        <p>Completá los datos de tu mascota para recibir una orientación.</p>
+    </section>
+
+    <section class="racion-contenedor">
+
+        <div class="racion-info">
+            <h2>¿Qué mascota tenés?</h2>
+            <p>Elegí una de las opciones.</p>
+
+            <div class="tipo-mascota">
+                <button type="button" class="tipo-opcion seleccionado" data-tipo="Perro">
+                    <img src="imagenes\perro png.png" alt="Perro">
+                    <span>Perro</span>
+                </button>
+
+                <button type="button" class="tipo-opcion" data-tipo="Gato">
+                    <img src="imagenes/gato png.png" alt="Gato">
+                    <span>Gato</span>
+                </button>
+            </div>
+        </div>
+
+        <form class="formulario-racion" id="form-racion">
+            <input type="hidden" id="tipo" value="Perro">
+
+            <div class="form-group">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" min="0.1" step="0.1" placeholder="Ej.: 8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <select id="edad" required>
+                    <option value="cachorro">Cachorro (menos de 12 meses)</option>
+                    <option value="adulto">Adulto</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="grupo-meses">
+                <label for="meses">¿Cuántos meses tiene?</label>
+                <select id="meses" required>
+                    <option value="2">2 meses</option>
+                    <option value="3">3 meses</option>
+                    <option value="4">4 meses</option>
+                    <option value="5-6">5–6 meses</option>
+                    <option value="7-10">7–10 meses</option>
+                    <option value="11-12">11–12 meses</option>
+                </select>
+            </div>
+
+            <div class="form-group oculto" id="grupo-actividad">
+                <label for="actividad">Nivel de actividad</label>
+                <select id="actividad">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+
+            <button type="submit" class="boton-principal">Calcular ración</button>
+            <p class="nota">La cantidad de alimento debe confirmarse con un veterinario.</p>
+        </form>
+
+        <div class="resultado-racion" id="resultado-racion" aria-live="polite">
+            <h2>Tu resultado aparecerá acá</h2>
+            <p>Elegí la mascota y completá los datos.</p>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-contenido">
+        <div>
+            <a href="index.html">
+                <img src="imagenes\logo nanis.png" alt="Logo NANI'S" style="width: 110px; max-width: 100%; border-radius: 50%;">
+            </a>
+            <p>Comida para mascotas hecha con amor.</p>
+        </div>
+        <div>
+            <h3>Contactanos</h3>
+            <p>WhatsApp: 11 2398-5275</p>
+            <p>Correo: nanisbarfood@gmail.com</p>
+        </div>
+        <div>
+            <h3>Seguinos</h3>
+            <a class="footer-red" class="contenedor-alineado" href="https://www.instagram.com/nanisbarfood/" target="_blank"><img src="imagenes\instagram logo.png" alt="Instagram"> Instagram</a></div>
+        </div>
+    </div>
+    <div class="medios-pago">
+        <img src="imagenes\efectivo.png" alt="Efectivo" style="max-width: 60px; max-height: 35px;">
+                    <img src="imagenes\visa.jpg" alt="Visa" style="max-width: 60px; max-height: 35px;">
+                    <img src="imagenes\Mastercard.png" alt="Mastercard" style="max-width: 60px; max-height: 35px;">
+                    <img src="imagenes\American.png" alt="American Express" style="max-width: 60px; max-height: 35px;">
+                    <img src="imagenes/mercado pago.png" alt="Mercado Pago" style="max-width: 60px; max-height: 35px;">
+                    <img src="imagenes\transferencia.png" alt="Transferencia" style="max-width: 60px; max-height: 35px;">
+    </div>
+    <div class="copyright">© 2026 NANI'S - Todos los derechos reservados.</div>
+</footer>
+
+<script>
+const edad = document.getElementById("edad");
+const grupoMeses = document.getElementById("grupo-meses");
+const grupoActividad = document.getElementById("grupo-actividad");
+const meses = document.getElementById("meses");
+const actividad = document.getElementById("actividad");
+
+function actualizarEdad() {
+    if (edad.value === "cachorro") {
+        grupoMeses.classList.remove("oculto");
+        grupoActividad.classList.add("oculto");
+        meses.required = true;
+        actividad.required = false;
+    } else {
+        grupoMeses.classList.add("oculto");
+        grupoActividad.classList.remove("oculto");
+        meses.required = false;
+        actividad.required = true;
+    }
+}
+
+edad.addEventListener("change", actualizarEdad);
+actualizarEdad();
+
+document.querySelectorAll(".tipo-opcion").forEach(function(boton) {
+    boton.addEventListener("click", function() {
+        document.querySelectorAll(".tipo-opcion").forEach(function(opcion) {
+            opcion.classList.remove("seleccionado");
+        });
+
+        boton.classList.add("seleccionado");
+        document.getElementById("tipo").value = boton.dataset.tipo;
+    });
+});
+
+document.getElementById("form-racion").addEventListener("submit", function(evento) {
+    evento.preventDefault();
+
+    const tipo = document.getElementById("tipo").value;
+    const peso = Number(document.getElementById("peso").value);
+    const edadElegida = edad.value;
+    const resultado = document.getElementById("resultado-racion");
+
+    if (!Number.isFinite(peso) || peso <= 0) {
+        resultado.innerHTML = "<h2>Ingresá un peso válido</h2>";
+        return;
+    }
+
+    if (edadElegida === "cachorro" && meses.value === "") {
+        resultado.innerHTML = "<h2>Falta completar la edad</h2><p>Elegí cuántos meses tiene tu cachorro.</p>";
+        return;
+    }
+
+    if (edadElegida !== "cachorro" && actividad.value === "") {
+        resultado.innerHTML = "<h2>Falta la actividad</h2><p>Elegí el nivel de actividad de tu mascota.</p>";
+        return;
+    }
+
+    let gramosPorKg;
+    let comidas;
+
+    if (tipo === "Perro") {
+        if (edadElegida === "cachorro") {
+            gramosPorKg = (
+                meses.value === "2" ||
+                meses.value === "3" ||
+                meses.value === "4"
+            ) ? 35 : 25;
+
+            comidas = 3;
+        } else if (edadElegida === "senior") {
+            gramosPorKg = 15;
+            comidas = 2;
+        } else {
+            gramosPorKg = 20;
+            comidas = 2;
+        }
+    } else {
+        if (edadElegida === "cachorro") {
+            gramosPorKg = (
+                meses.value === "2" ||
+                meses.value === "3" ||
+                meses.value === "4"
+            ) ? 30 : 20;
+
+            comidas = 3;
+        } else if (edadElegida === "senior") {
+            gramosPorKg = 12;
+            comidas = 2;
+        } else {
+            gramosPorKg = 15;
+            comidas = 2;
+        }
+    }
+
+    if (edadElegida !== "cachorro") {
+        if (actividad.value === "baja") {
+            gramosPorKg *= 0.8;
+        } else if (actividad.value === "alta") {
+            gramosPorKg *= 1.2;
+        }
+    }
+
+    const gramosDiarios = Math.round(peso * gramosPorKg);
+    const gramosPorComida = Math.round(gramosDiarios / comidas);
+
+    const nombreEdad = edadElegida === "cachorro"
+        ? "cachorro"
+        : edadElegida === "adulto"
+            ? "adulto"
+            : "senior";
+
+    const nombreMascota = tipo === "Perro" ? "perro" : "gato";
+
+    resultado.innerHTML =
+        "<h2>🐾 Resultado ✨</h2>" +
+        "<div class='resultado-detalle'>" +
+            "<p>Total por día</p>" +
+            "<h2>" + gramosDiarios + " g</h2>" +
+            "<hr>" +
+            "<p>Repartido en</p>" +
+            "<h2>" + comidas + " comidas</h2>" +
+            "<hr>" +
+            "<p>Cada ración</p>" +
+            "<h2>" + gramosPorComida + " g</h2>" +
+        "</div>" +
+        "<p>Tu " + nombreMascota + " " + nombreEdad +
+        " tendría una porción estimada de " + gramosDiarios +
+        " g por día, repartidos en " + comidas +
+        " comidas de aproximadamente " + gramosPorComida +
+        " g cada una.</p>" +
+        "<p class='nota'>La cantidad de alimento debe confirmarse con un veterinario.</p>";
+});
+</script>
+
+</body>
+</html>
